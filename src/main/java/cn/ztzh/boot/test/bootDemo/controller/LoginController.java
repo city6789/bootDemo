@@ -12,39 +12,34 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * controller入口
+ * 
  * @author heshiyang
  *
  */
 @RestController
 public class LoginController {
-	//Logger log = LoggerFactory.getLogger(LoginController.class);
+	private static final Logger log = LoggerFactory.getLogger(LoginController.class);
 
-	@RequestMapping("/hello")
-    //@ResponseBody
-	public  String mylogin() {
-		return "Hello World";
-	}
-	
-	
 	/*
-	 * @RequestMapping("/hello")
-	 * 
-	 * @ResponseBody public List<String> mylogin() { //log.info("登录状态：{ }",true);
-	 * //return "我是第一个登录接口";
-	 * 
-	 * @SuppressWarnings("rawtypes") List list = new ArrayList(); list.add("a,");
-	 * list.add("b,"); list.add("c,"); System.out.println(list); return list; }
+	 * @RequestMapping("/hello") // @ResponseBody public String mylogin() { return
+	 * "Hello World"; }
 	 */
+
+	
+	  @RequestMapping("/hello")
+	  @ResponseBody 
+	  public List<String> mylogin() { 
+		  //log.info("登录状态：{ }",true);
+	  //return "我是第一个登录接口";
+	  
+	  List list = new ArrayList(); 
+	  list.add("a,");
+	  list.add("b,"); 
+	  list.add("c,"); 
+	  //System.out.println(list);
+	  //log.info("{ }",list);
+	  log.info("There are now {} user accounts: {}", list, true);    // faster
+	  return list; 
+	  }
+	 
 }
-
-
-
-
-
-
-
-
-
-
-
-
