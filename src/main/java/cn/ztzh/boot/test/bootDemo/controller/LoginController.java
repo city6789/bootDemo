@@ -36,9 +36,9 @@ public class LoginController {
 	  list.add("a,");
 	  list.add("b,"); 
 	  list.add("c,"); 
-	  //System.out.println(list);
+	  System.out.println(list);
 	  //log.info("{ }",list);
-	  log.info("There are now {} user accounts: {}", list, true);    // faster
+	  log.info("使用占位符打印的There are now {} user accounts: {}", list, true);    // faster
 	  return list; 
 	  }
 	 
